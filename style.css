@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: rgb(70, 66, 66);
+	margin: 0;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.calculator-wrapper {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.calcutator {
+	display: grid;
+	grid-template-columns: repeat(4, 60px);
+	grid-template-rows: minmax(120px, auto) repeat(5, 60px);
+}
+
+.calculator__input {
+	grid-column: 1 / -1;
+	background-color: rgba(0, 0, 0, 0.75);
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-around;
+	flex-direction: column;
+	padding: 10px;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+.calculator__text-prev {
+	font-size: 1.2rem;
+	color: rgba(255, 255, 255, 0.75);
+}
+
+.calculator__text-curr {
+	font-size: 1.8rem;
+	color: rgba(255, 255, 255);
+}
+
+.calculator__btn {
+	outline: none;
+	background: white;
+	border: 1px solid #aaa;
+	cursor: pointer;
+	font-size: 1.2rem;
+	transition: 0.3s ease;
+}
+
+.calculator__btn:hover {
+	background: #eee;
+}
+
+.calculator__btn:active {
+	background: #ccc;
+}
+
+.calculator__btn--wide {
+	grid-column: span 2;
+}
+
+.calculator__btn--vwide {
+	grid-row: span 2;
+}
